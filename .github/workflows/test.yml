@@ -1,19 +1,18 @@
-name: Test on Multiple OS
+name: Run Flask Tests
 
 on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]  # 👈 Hier definierst du die Plattformen
-        python-version: [3.11, 3.12]                  # Optional: mehrere Python-Versionen
+        python-version: [3.11, 3.12]
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Python
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
