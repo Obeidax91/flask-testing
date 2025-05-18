@@ -1,0 +1,90 @@
+
+<!--Autor: Obeida A.
+    Datum: 28.10.2024
+
+    Location: Markt Schwaben 
+
+    Firma: Obeida-->
+
+
+
+
+    <!DOCTYPE html>
+
+    <html lang="en">
+    
+        <head>
+    
+            <meta charset="UTF-8">
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+            <title>Animierter Button</title>
+    
+            <title>Button Links</title>
+    
+            <link rel="stylesheet" href="static\styles.css"> <!-- Verweis auf die CSS-Datei -->
+
+
+    
+        </head>
+    
+        <body>
+    
+        <h1 style="color:rgb(8, 5, 173)";>Vereinfachte Arbeitsabläufe durch klar strukturierte und verlinkte Teilprozesse </h1>
+        <br><br><br>
+    
+    
+        <div class="grid-container">
+            <div class="table-group">
+                <h2>Group 1</h2>
+                <table id="table1">
+                    <tr>
+                        <td><button onclick="openLink(link.Prozess1)" class="Prozess1-button">Google</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.Prozess2)" class="Prozess2-button">Prozess2</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.Prozess3)" class="Prozess3-button">YouTube</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-group">
+                <h2>Group 2</h2>
+                <table id="table2">
+                    <tr>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.Prozess6)" class="Prozess6-button">Prozess6</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-group">
+                <h2>Group 3</h2>
+                <table id="table3">
+                    <tr>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.lucidchart)" class="lucidchart-button">Lucidchart</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.google)" class="google-button">Google</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.chatgpt)" class="chatgpt-button">ChatGpt</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.calctree)" class="calctree-button">CalcTree</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.grabcad)" class="grabcad">GrabCad</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.octoprint)" class="octoprint-button">OctoPrint</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-group">
+                <h2>Group 4</h2>
+                <table id="table4">
+                    <tr>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.Prozess2)" class="Prozess20-button">Prozess20</button></td>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.Prozess3)" class="Prozess3-button">YouTube</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" style="margin-left: 10px;" onclick="openLink(link.Prozess6)" class="Prozess19-button">Prozess19</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+        <script src="static\functions.js"></script> 
+    
+        </body>
+    
+    </html>

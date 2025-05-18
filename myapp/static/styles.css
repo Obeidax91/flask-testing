@@ -1,0 +1,298 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: auto; /* Adjust rows automatically */
+    column-gap: 70px; /* Adjust the gap between columns */
+    row-gap: 50px; /* Adjust the gap between rows */
+}
+
+.table-group {
+    position: relative; /* Position relative to allow absolute positioning of the title */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Add padding inside each group */
+    border: 2px solid rgb(16, 132, 152); /* Add border to each group */
+    border-width: 2px; /* Define the thickness of the border */
+    border-radius: 10px; /* Optional: add rounded corners */
+    margin-top: 30px; /* Add space for the title */
+}
+
+.table-group h2 {
+    margin-bottom: 10px; /* Adjust the space between the title and the table */
+    position: absolute; /* Position the title absolutely */
+    top: -20px; /* Adjust the position of the title */
+    left: 10px; /* Align the title to the left side of the border */
+    background-color: rgb(115, 238, 117); /* Background color to cover the border */
+    padding: 0 10px; /* Padding to add space around the title */
+    margin: 0; /* Remove default margin */
+}
+
+#table1, #table2, #table3, #table4 {
+    width: 100%;
+}
+
+#table1 td, #table2 td, #table3 td, #table4 td {
+    padding: 0; /* Remove space between buttons */
+}
+
+/* Different background colors for each group */
+.group1 {
+    background-color: #f8d7da; /* Light red */
+}
+
+.group2 {
+    background-color: #d4edda; /* Light green */
+}
+
+.group3 {
+    background-color: #d1ecf1; /* Light blue */
+}
+
+.group4 {
+    background-color: #fff3cd; /* Light yellow */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Make tables full width on smaller screens */
+    }
+}
+
+/* Hauptstil für die Buttons mit schwebender Erscheinung und sanfter Einwölbung */
+button, 
+.Prozess1-button, 
+.Prozess2-button, 
+.Prozess3-button, 
+.Prozess4-button, 
+.Prozess5-button, 
+.Prozess6-button, 
+.Prozess7-button, 
+.Prozess8-button, 
+.Prozess9-button, 
+.Prozess10-button, 
+.Prozess11-button, 
+.Prozess12-button, 
+.lucidchart-button, 
+.google-button, 
+.chatgpt-button, 
+.calctree-button, 
+.grabcad-button, 
+.octoprint-button, 
+.Prozess20-button, 
+.Prozess19-button, 
+.Prozess22-button, 
+.Prozess23-button, 
+.Prozess21-button, 
+.Prozess24-button, 
+.Prozess25-button, 
+.Prozess26-button-button, 
+.Prozess27-button, 
+.Prozess28-button, 
+.Prozess29-button, 
+.Prozess30-button, 
+.Prozess31-button, 
+.Prozess32-button {
+    background-color: rgb(99, 45, 187); /* Einheitliche Hintergrundfarbe */
+    color: rgb(2, 2, 2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px; /* Leicht abgerundete Ecken */
+    width: 300px;
+    height: 100px;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    /* Schwebende Erscheinung durch Schatten */
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3), 
+                -8px -8px 16px rgba(148, 146, 146, 0.6), 
+                inset 5px 5px 10px rgba(0, 0, 0, 0.2), /* Sanfte Einwölbung */
+                inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Leuchtender Kreis, der der Maus folgt */
+button::before, 
+.Prozess1-button::before, 
+.Prozess2-button::before, 
+.Prozess3-button::before, 
+.Prozess4-button::before, 
+.Prozess5-button::before, 
+.Prozess6-button::before, 
+.Prozess7-button::before, 
+.Prozess8-button::before, 
+.Prozess9-button::before, 
+.Prozess10-button::before, 
+.Prozess11-button::before, 
+.Prozess12-button::before, 
+.lucidchart-button::before, 
+.google-button::before, 
+.chatgpt-button::before, 
+.calctree-button::before, 
+.grabcad-button::before, 
+.octoprint-button::before, 
+.Prozess1FürElektro-button::before, 
+.Prozess19-button::before, 
+.Prozess22-button::before, 
+.Prozess23-button::before, 
+.Prozess21-button::before, 
+.Prozess24-button::before, 
+.Prozess25-button::before, 
+.Prozess26-button-button::before, 
+.Prozess27-button::before, 
+.Prozess28-button::before, 
+.Prozess29-button::before, 
+.Prozess30-button::before, 
+.Prozess31-button::before, 
+.Prozess32-button::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(21, 23, 22, 0.3), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    top: var(--mouse-y, 50%);
+    left: var(--mouse-x, 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+/* Hover-Effekt für den leuchtenden Kreis */
+button:hover::before, 
+.Prozess1-button:hover::before, 
+.Prozess2-button:hover::before, 
+.Prozess3-button:hover::before, 
+.Prozess4-button:hover::before, 
+.Prozess5-button:hover::before, 
+.Prozess6-button:hover::before, 
+.Prozess7-button:hover::before, 
+.Prozess8-button:hover::before, 
+.Prozess9-button:hover::before, 
+.Prozess10-button:hover::before, 
+.Prozess11-button:hover::before, 
+.Prozess12-button:hover::before, 
+.lucidchart-button:hover::before, 
+.google-button:hover::before, 
+.chatgpt-button:hover::before, 
+.calctree-button:hover::before, 
+.grabcad-button:hover::before, 
+.octoprint-button:hover::before, 
+.Prozess20-button:hover::before, 
+.Prozess19-button:hover::before, 
+.Prozess22-button:hover::before, 
+.Prozess23-button:hover::before, 
+.Prozess21-button:hover::before, 
+.Prozess24-button:hover::before, 
+.Prozess25-button:hover::before, 
+.Prozess26-button-button:hover::before, 
+.Prozess27-button:hover::before, 
+.Prozess28-button:hover::before, 
+.Prozess29-button:hover::before, 
+.Prozess30-button:hover::before, 
+.Prozess31-button:hover::before, 
+.Prozess32-button:hover::before {
+    opacity: 1;
+}
+
+/* Hover-Effekt für schwebende Erscheinung */
+button:hover, 
+.Prozess1-button:hover, 
+.Prozess2-button:hover, 
+.Prozess3-button:hover, 
+.Prozess4-button:hover, 
+.Prozess5-button:hover, 
+.Prozess6-button:hover, 
+.Prozess7-button:hover, 
+.Prozess8-button:hover, 
+.Prozess9-button:hover, 
+.Prozess10-button:hover, 
+.Prozess11-button:hover, 
+.Prozess12-button:hover, 
+.lucidchart-button:hover, 
+.google-button:hover, 
+.chatgpt-button:hover, 
+.calctree-button:hover, 
+.grabcad-button:hover, 
+.octoprint-button:hover, 
+.Prozess20-button:hover, 
+.Prozess19-button:hover, 
+.Prozess22-button:hover, 
+.Prozess23-button:hover, 
+.Prozess21-button:hover, 
+.Prozess24-button:hover, 
+.Prozess25-button:hover, 
+.Prozess26-button-button:hover, 
+.Prozess27-button:hover, 
+.Prozess28-button:hover, 
+.Prozess29-button:hover, 
+.Prozess30-button:hover, 
+.Prozess31-button:hover, 
+.Prozess32-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 
+                -8px -8px 20px rgba(0, 0, 0, 0.7), 
+                inset 5px 5px 10px rgba(0, 0, 0, 0.3), 
+                inset -5px -5px 10px rgba(255, 255, 255, 0.1); /* Leichter "eingedrückter" Effekt */
+}
+
+/* Effekt beim Klicken für eingedrückten Look */
+button:active, 
+.Prozess1-button:active, 
+.Prozess2-button:active, 
+.Prozess3-button:active, 
+.Prozess4-button:active, 
+.Prozess5-button:active, 
+.Prozess6-button:active, 
+.Prozess7-button:active, 
+.Prozess8-button:active, 
+.Prozess9-button:active, 
+.Prozess10-button:active, 
+.Prozess11-button:active, 
+.Prozess12-button:active, 
+.lucidchart-button:active, 
+.google-button:active, 
+.chatgpt-button:active, 
+.calctree-button:active, 
+.grabcad-button:active, 
+.octoprint-button:active, 
+.Prozess20-button:active, 
+.Prozess19-button:active, 
+.Prozess22-button:active, 
+.Prozess23-button:active, 
+.Prozess21-button:active, 
+.Prozess24-button:active, 
+.Prozess25-button:active, 
+.Prozess26-button-button:active, 
+.Prozess27-button:active, 
+.Prozess28-button:active, 
+.Prozess29-button:active, 
+.Prozess30-button:active, 
+.Prozess31-button:active, 
+.Prozess32-button:active {
+    box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.4), 
+                inset -8px -8px 16px rgba(4, 123, 83, 0.6);
+    transform: scale(0.95);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
