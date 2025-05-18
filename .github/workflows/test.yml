@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]  # 👈 Hier definierst du die Plattformen
+        os: [ubuntu-latest, windows-latest]  # 👈 Hier definierst du die Plattformen
         python-version: [3.10, 3.11, 3.12]                  # Optional: mehrere Python-Versionen
 
     steps:
